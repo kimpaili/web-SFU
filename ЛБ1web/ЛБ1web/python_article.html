@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+  <head>
+    <title>Лабораторная работа №1</title>
+    <link rel="stylesheet" href="оформление.css">
+  </head>
+  <body>
+    <header>
+      <h1>Python: История, Обзор, Примеры</h1>
+    </header>
+    <h2>Выполнила: Гастюнина П.В., УБ23-09Б</h2>
+
+    <nav>
+      <ul>
+        <li><a href="#history">История создания</a></li>
+        <li><a href="#view">Краткий обзор языка</a></li>
+        <li><a href="#example">Примеры кода</a></li>
+      </ul>
+    </nav>
+
+    <section id="history">
+        <h1>История создания</h1>
+        <p>
+            Язык программирования Python был создан Гвидо ван Россумом в конце 1980-х годов. 
+            Первый выпуск был в 1991 году. Python был разработан как интерпретируемый язык, 
+            ориентированный на простоту и удобство написания кода.
+        </p>
+        <img src="Rossum.jpg" class="left-image" alt="Гвидо ван Россум" width="150">
+        <p>
+          Python быстро завоевал популярность благодаря своей читабельности и высокой эффективности. 
+          Язык был назван в честь популярного британского комедийного шоу "Monty Python's Flying Circus".
+        </p>
+    </section>
+    <br><br><br><br><br><br><br><br>
+    <section id="view">
+      <h1>Краткий обзор языка</h1>
+      <p>
+        Python является высокоуровневым, интерпретируемым языком программирования с поддержкой 
+        различных парадигм, включая объектно-ориентированное, процедурное и функциональное программирование.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Версия</th>
+            <th>Дата выпуска</th>
+            <th>Основные изменения</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Python 2.0</td>
+            <td>2000</td>
+            <td>Добавление поддержки Unicode, garbage collection</td>
+          </tr>
+          <tr>
+            <td>Python 3.0</td>
+            <td>2008</td>
+            <td>Улучшенная обработка строк, удаление старых синтаксических конструкций</td>
+          </tr>
+          <tr>
+            <td>Python 3.10</td>
+            <td>2021</td>
+            <td>Pattern Matching, улучшенная читаемость кода</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h2>Области применения Python:</h2>
+      <ul class="custom-list">
+        <li>Автоматизация задач</li>
+        <li>Web-разработка</li>
+        <li>Разработка игр</li>
+      </ul>
+
+      <p>Также у языка Python есть узнаваемый логотип.</p>
+      <img src="logo.jpg" alt="Логотип Python" class="center-image" width="150">
+    </section>
+
+    <section id="example">
+      <h1>Примеры кода</h1>
+      <p>
+        Python позволяет создавать мощные программы с минимальным количеством кода. Ниже приведены 
+        несколько примеров кода, иллюстрирующие возможности языка.
+      </p>
+      <h2>Простой пример: Hello, World!</h2>
+      <pre><code class="language-python">print("Hello, World!")</code></pre>
+
+      <h2>Функция: Вычисление факториала</h2>
+      <pre><code class="language-python">
+        def factorial(n):
+            if n == 0:
+                return 1
+            else:
+                return n * factorial(n - 1)
+      </code></pre>
+      
+      <p>Простота, гибкость и удобство Python делают его все более популярным год за годом.</p>
+      <img src="graf.gif" alt="График популярности языков программирования за год" class="right-image" height="500">
+      <p>Больше о Python можно узнать на <a href="https://python.org" target="_blank">официальном сайте</a>.</p>
+    </section>
+
+    <footer>
+      <h2>Использованные теги и CSS-свойства</h2>
+      <ul>
+          <li>&lt;html&gt;, &lt;head&gt;, &lt;body&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;h1&gt;, &lt;h2&gt;, &lt;table&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;footer&gt;, и т.д.</li>
+      </ul>
+    </footer>
+  </body>
+</html>
