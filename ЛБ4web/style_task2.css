@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #acdcc4;
+}
+.table {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    background-color: #639482;
+    border: 5px solid #295740;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.ball {
+    position: absolute;
+    bottom: 50px;
+    left: 250px;
+    width: 30px;
+    height: 30px;
+    background-color: #cc833d;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: ballMove 4s infinite;
+}
+.cue {
+    position: absolute;
+    bottom: 65px;
+    left: 50px;
+    width: 200px;
+    height: 5px;
+    background-color: #6e2613;
+    transform-origin: right center;
+    animation: cueStrike 4s infinite;
+}
+@keyframes ballMove {
+    0%, 100% {
+        left: 250px;
+    }
+    25% {
+        left: 400px;
+    }
+    50% {
+        left: 250px;
+    }
+
+}
+@keyframes cueStrike {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+}

@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #87CEEB;
+}
+.scene {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+.house {
+    position: relative;
+    margin: 0 auto;
+    width: 150px;
+    height: 100px;
+}
+.roof {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 50px solid #8B0000;
+}
+.walls {
+    position: absolute;
+    top: 50px;
+    width: 150px;
+    height: 100px;
+    background-color: #FFD700;
+    border: 2px solid #8B4513;
+}
+.door {
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 80px;
+    width: 30px;
+    height: 50px;
+    background-color: #8B4513;
+    border: 2px solid #5A3311;
+}
+.window {
+    position: absolute;
+    top: 75px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #ADD8E6;
+    border: 2px solid #5A3311;
+}
+.tree {
+    position: absolute;
+    bottom: 0;
+    left: -100px;
+}
+.trunk {
+    position: absolute;
+    top: -205px;
+    bottom: 0;
+    width: 20px;
+    height: 60px;
+    background-color: #8B4513;
+}
+.leaves {
+    position: absolute;
+    bottom: 60px;
+    top: -280px;
+    left: -30px;
+    width: 80px;
+    height: 80px;
+    background-color: #228B22;
+    border-radius: 50%;
+}
+.grass {
+    position: absolute;
+    left: -900px;
+    top: -146px;
+    width: 2000px;
+    height: 600px;
+    background: #228B22;
+}
+.sun {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 80px;
+    height: 80px;
+    background-color: #FFD700;
+    border-radius: 50%;
+}
