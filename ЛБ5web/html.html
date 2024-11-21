@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Лабортаорная работа №5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .task {
+            margin-bottom: 20px;
+        }
+        .output {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input {
+            padding: 5px;
+            margin-top: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Решения задач варианта 1</h1>
+
+    <h2>Задание 1: Проверка на простое число</h2>
+    <input type="number" id="primeInput" placeholder="Введите число">
+    <button onclick="task1()">Проверить</button>
+    <p id="primeResult"></p>
+
+    <h2>Задание 2: Сумма элементов до первого положительного синуса</h2>
+    <input type="text" id="arrayInput" placeholder="Введите числа через запятую">
+    <button onclick="task2()">Вычислить</button>
+    <p id="arrayResult"></p>
+
+    <h2>Задание 3: Удаление чисел с четными цифрами</h2>
+    <input type="text" id="deleteInput" placeholder="Введите числа через запятую">
+    <button onclick="task3()">Удалить</button>
+    <p id="deleteResult"></p>
+
+    <h2>Задание 4: Подсчет количества слогов</h2>
+    <input type="text" id="wordInput" placeholder="Введите слово">
+    <button onclick="task4()">Посчитать</button>
+    <p id="syllableResult"></p>
+
+    <script src="lab5JS.js"></script>
+</body>
+</html>
