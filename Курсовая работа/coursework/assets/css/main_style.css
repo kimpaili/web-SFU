@@ -1,0 +1,145 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.reg {
+    text-align: center;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #604129;
+    margin-left: 20px;
+    font-size: 1.1em;
+}
+
+a:hover {
+    color: #7a5e42;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px 40px;
+    border-bottom: 1px solid #c4bcbc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left h1 {
+    font-size: 2em;
+    color: #64542c;
+}
+
+.header-left p {
+    font-size: 0.9em;
+    color: #836b56;
+    margin-top: 5px;
+}
+
+.header-right a {
+    color: #604129;
+}
+
+.login-section {
+    background-image: url('../img/main_background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #604129;
+}
+
+form label {
+    display: block;
+    text-align: left;
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #604129;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form button {
+    padding: 10px;
+    background-color: #836b56;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form button:hover {
+    background-color: #8e999d;
+}
+
+.about-section {
+    background-color: #d4c1ba;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.about-section h2 {
+    color: #604129;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    color: #64542c;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.contacts-section {
+    background-color: #E4DED9;
+    padding: 40px;
+    text-align: center;
+}
+
+.contacts-section h2 {
+    color: #604129;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contacts-section p {
+    color: #64542c;
+    font-size: 1.2em;
+}

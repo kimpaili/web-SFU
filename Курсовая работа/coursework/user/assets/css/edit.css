@@ -1,0 +1,78 @@
+body {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.login-form {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+p {
+    text-align: center;
+    color: #352B23;
+    font-size: 1.5em;
+}
+
+p a {
+    color: #947b61;
+}
+
+h1 {
+    text-align: center;
+    color: #352B23;
+    font-size: 2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+input, select {
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px;
+    background-color: #836b56;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8e999d;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
