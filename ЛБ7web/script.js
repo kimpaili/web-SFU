@@ -21,9 +21,17 @@ function backspace() {
 function calculate(operation) {
     if (!isOn) return;
     let value = parseFloat(display.value);
+    if (isNaN(value)) {
+        display.value = 'Error';
+        return;
+    }
     switch (operation) {
         case 'sqrt':
-            display.value = Math.sqrt(value);
+            if (value < 0) {
+                display.value = 'Error';
+            } else {
+                display.value = Math.sqrt(value);
+            }
             break;
         case '%':
             display.value = value / 100;
@@ -34,12 +42,21 @@ function calculate(operation) {
 }
 
 function calculateResult() {
-    if (isOn) {
-        try {
-            display.value = eval(display.value);
-        } catch {
+    if (!isOn) return;
+    try {
+        // Check for division by zero
+        if (/\/0(?![0-9])/g.test(display.value)) {
             display.value = 'Error';
+            return;
         }
+        // Evaluate the expression
+        let result = eval(display.value);
+        if (isNaN(result) || !isFinite(result)) {
+            throw new Error('Invalid result');
+        }
+        display.value = result;
+    } catch {
+        display.value = 'Error';
     }
 }
 
