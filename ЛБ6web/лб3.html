@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лабораторная работа №2</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.querySelector(".registration");
+            const button = form.querySelector("button");
+            const inputs = form.querySelectorAll("input, select");
+            const errorMessages = document.createElement("div");
+
+            errorMessages.classList.add("errors");
+            form.appendChild(errorMessages);
+
+            button.addEventListener("click", (event) => {
+                event.preventDefault();
+                let errors = [];
+                let formData = {};
+
+                errorMessages.innerHTML = "";
+
+                inputs.forEach(input => {
+                    const name = input.name;
+                    const value = input.value.trim();
+
+                    if (input.hasAttribute("required") && !value) {
+                        errors.push(`Поле "${getFieldName(name)}" обязательно для заполнения.`);
+                    } else {
+                        if (input.type === "email" && value && !/\S+@\S+\.\S+/.test(value)) {
+                            errors.push(`Поле "${getFieldName(name)}" должно содержать корректный email.`);
+                        }
+                        if (input.type === "password" && input.id === "confirm" && value !== document.querySelector("#password").value) {
+                            errors.push(`Поле "Подтвердите пароль" не совпадает с паролем.`);
+                        }
+                        if (input.type === "tel" && value && !/^\+?\d{10,15}$/.test(value)) {
+                            errors.push(`Поле "${getFieldName(name)}" должно содержать корректный номер телефона.`);
+                        }
+
+                        if (!errors.length) {
+                            formData[getFieldName(name)] = value;
+                        }
+                    }
+                });
+
+                if (errors.length) {
+                    errorMessages.innerHTML = errors.map(err => `<p>${err}</p>`).join("");
+                } else {
+                    const message = Object.entries(formData)
+                        .map(([key, value]) => `${key}: ${value}`)
+                        .join("\n");
+                    alert(`Регистрация прошла успешно!\n\n${message}`);
+
+                    inputs.forEach(input => {
+                        input.value = "";
+                        if (input.type === "radio") input.checked = false;
+                    });
+                    document.querySelector("select").value = "";
+                }
+            });
+
+            function getFieldName(name) {
+                const fieldNames = {
+                    username: "Имя пользователя",
+                    email: "Email",
+                    password: "Пароль",
+                    confirm: "Подтвердите пароль",
+                    birthday: "Дата рождения",
+                    gender: "Пол",
+                    country: "Страна",
+                    phone: "Номер телефона"
+                };
+                return fieldNames[name] || name;
+            }
+        });
+    </script>
+    <style>
+        .errors {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration">
+        <h2>Регистрация</h2>
+        <div class="form">
+            <label for="username">Имя пользователя</label>
+            <input type="text" id="username" name="username" placeholder="Введите имя пользователя" required>
+        </div>
+        <div class="form">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+        </div>
+        <div class="form">
+            <label for="password">Пароль</label>
+            <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+        </div>
+        <div class="form">
+            <label for="confirm">Подтвердите пароль</label>
+            <input type="password" id="confirm" name="confirm" placeholder="Подтвердите пароль" required>
+        </div>
+        <div class="form">
+            <label for="birthday">Дата рождения</label>
+            <input type="date" id="birthday" name="birthday" required>
+        </div>
+        <div class="form">
+            <label>Пол</label>
+            <input type="radio" id="male" name="gender" value="Мужской" required>
+            <label for="male">Мужской</label>
+            <input type="radio" id="female" name="gender" value="Женский" required>
+            <label for="female">Женский</label>
+        </div>
+        <div class="form">
+            <label for="country">Страна</label>
+            <select id="country" name="country" required>
+                <option value="">Выберите страну</option>
+                <option value="Россия">Россия</option>
+                <option value="Беларусь">Беларусь</option>
+                <option value="Северная Корея">Северная Корея</option>
+            </select>
+        </div>
+        <div class="form">
+            <label for="phone">Номер телефона</label>
+            <input type="tel" id="phone" name="phone" placeholder="Введите номер телефона" required>
+        </div>
+        <button type="submit">Зарегистрироваться</button>
+    </div>
+</body>
+</html>
